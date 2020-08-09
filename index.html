@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather Page</title>
+    <!-- Bootstrap CSS CDN  -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
 </head>
+
 <body>
-    <div class=locations>
-        <form id=locations-input method="POST">
-            <label for="city-text">Search for a city</label>
-            <input type="text"name="city-text" id="city-text" >
-        </form>
-        <ul id="city-list"></ul>
+    <!-- Jumbotron for Title -->
+    <div class="jumbotron" style="background-color: #20315A ; color: white;">
+        <h1 class="text-center">
+            <strong> Weather Dashboard</strong>
+        </h1>
     </div>
+
+    <aside class=locations>
+        <form id="locations-form" method="POST">
+            <label for="city-text">Search for a city</label>
+            <input type="text" name="city-text" id="city-text">
+           
+                <!-- <button>
+                    <i class="fas fa-search"></i>
+                </button> -->
+            
+        </form>
+        <!-- <ul id="city-list"></ul> -->
+        <div class="btn-group-vertical" role="group" id="city-list" aria-label="Button group with nested dropdown">
+            <!-- <button type="button" class="btn btn-secondary">1</button> -->
+        </div>
+    </aside>
+
     <script src="script.js"></script>
 </body>
+
 </html>

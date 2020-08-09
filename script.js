@@ -11,8 +11,11 @@ function renderCities(){
     for(var i=0; i<cities.length; i++){
         var city = cities[i];
 
-        var li = document.createElement("li");
+        var li = document.createElement("button");
         li.textContent = city;
+        // li.classList.add("btn");
+        li.classList.add("btn","btn-secondary");
+        
         cityList.appendChild(li);
     }
     
@@ -21,18 +24,16 @@ function renderCities(){
 cityForm.addEventListener("submit", function(event){
     event.preventDefault();
 
-    var cityText = cityInput.nodeValue.trim();
+    var cityText = cityInput.value.trim();
 
     if (cityText ===""){
         return;
     }
 
-    cities= cities+ cityText;
+    cities.push(cityText);
     cityInput.value = "";
 
     renderCities();
 
 
-};
-
-)
+});
