@@ -24,21 +24,66 @@
         </h1>
     </div>
 
-    <aside class=locations>
-        <form id="locations-form" method="POST">
-            <label for="city-text">Search for a city</label>
-            <input type="text" name="city-text" id="city-text">
-           
-                <!-- <button>
+    <div class=container>
+        <div class="row">
+            <div class="col-4">
+                <form id="locations-form" method="POST">
+                    <label for="city-text">Search for a city</label>
+                    <input type="text" name="city-text" id="city-text">
+
+                    <!-- <button>
                     <i class="fas fa-search"></i>
                 </button> -->
-            
-        </form>
-        <!-- <ul id="city-list"></ul> -->
-        <div class="btn-group-vertical" role="group" id="city-list" aria-label="Button group with nested dropdown">
-            <!-- <button type="button" class="btn btn-secondary">1</button> -->
+
+                </form>
+                <!-- <ul id="city-list"></ul> -->
+                <div type="submit" class="btn-group-vertical" role="group" id="city-list"
+                    aria-label="Button group with nested dropdown">
+                    <!-- <button type="button" class="btn btn-secondary">1</button> -->
+                </div>
+            </div>
+
+
+
+
+            <!-- This row will handle all of the retrieved articles -->
+            <div class="col-8">
+
+                <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+                <div class="card" >
+
+                    <!-- card Heading for the retrieved articles box -->
+                    <div class="card-header">
+                        <strong>
+                            <i class="fa fa-table"></i> Top Articles</strong>
+                    </div>
+
+                    <!-- This main card will hold each of the resulting articles -->
+                    <div class="card-body" id="article-section">
+                    </div>
+                </div>
+            </div>
         </div>
-    </aside>
+
+    </div>
+
+    <!-- Footer Region -->
+    <div class="row">
+        <div class="col-sm-12">
+
+            <!-- Line Break followed by closing -->
+            <hr>
+            <h5 class="text-center">
+                <small>Made with lots and lots of
+                    <i class="fa fa-heart"></i>
+                </small>
+            </h5>
+
+        </div>
+    </div>
+
+
+
 
     <script src="script.js"></script>
 </body>
