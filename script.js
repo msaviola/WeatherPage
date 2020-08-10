@@ -7,8 +7,6 @@ var CityCount ="";
 renderCities();
 
 function queryURL(){
-
-
 var queryURL = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=";
 var key= { "api-key": "34c625f0fb47ccd59d343b8dead43393"};
 queryParams.q = $("#city-text")
